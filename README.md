@@ -3,51 +3,51 @@
 ## Getroffene Annahmen / Vorgaben
 1. Die Intervaldaten werden im Format [\d+,\d+] erwartet. Zwischen den einzelnen Intervallen muss ein Leerzeichen stehen.  
    Jeder Wert einer Bereichsgrenze ist ganzzahlig und positiv.
-2. Für die Bereichsgrenzen gilt der Zahlenbereich von 0 bis bis 2.147.483.646 (32 Bit). 
+2. FÃ¼r die Bereichsgrenzen gilt der Zahlenbereich von 0 bis 2.147.483.646 (32 Bit). 
 3. Eine Intervallangabe darf innerhalb der eckigen Klammern keine Leerzeichen enthalten. 
 
 ## Systemvoraussetzungen
-* Java Version 8 oder höher
-* Ant Version 1.9 oder höher
-* Die Umgebungsvariablen JAVA\_HOME und ANT\_HOME müssen gesetzt sein und auf die korrekten Verzeichnisse verweisen
+* Java Version 8 oder hÃ¶her
+* Ant Version 1.9 oder hÃ¶her
+* Die Umgebungsvariablen JAVA\_HOME und ANT\_HOME mÃ¼ssen gesetzt sein und auf die korrekten Verzeichnisse verweisen
 
 ## Projekt bauen
-Das Projekt wird über das Ant-Buildfile gebaut.
+Das Projekt wird Ã¼ber das Ant-Buildfile gebaut.
 0. Dieses Git-Projekt in ein beliebiges lokales Verzeichnis herunterladen
-1. Unter Windows eine Kommandozeile öffnen
+1. Unter Windows eine Kommandozeile Ã¶ffnen
 2. In das Projekt-Verzeichnis wechseln 
-3. 'ant compile' ausführen
+3. 'ant compile' ausfÃ¼hren
 
-## Projekt ausführen
-1. Unter Windows eine Kommandozeile öffnen
+## Projekt ausfÃ¼hren
+1. Unter Windows eine Kommandozeile Ã¶ffnen
 2. In das Projekt-Verzeichnis wechseln 
-3. MERGE.cmd ausführen
+3. MERGE.cmd ausfÃ¼hren
 
-Folgende Befehlszeilenparameter stehen zur Verfügung  
+Folgende Befehlszeilenparameter stehen zur VerfÃ¼gung  
 
 **-f <dateiname>**
-  (optional) Intervaldaten werden als Textdatei übergeben. Die Option -f muss als erster Parameter angegeben werden.  
+  (optional) Intervaldaten werden als Textdatei Ã¼bergeben. Die Option -f muss als erster Parameter angegeben werden.  
 
-#### Beispiele für den Aufruf
+#### Beispiele fÃ¼r den Aufruf
 
-* Direkte Angabe der Intervalle über die Befehlszeile.
+* Direkte Angabe der Intervalle Ã¼ber die Befehlszeile.
     
     MERGE [25,30] [2,19] [14,23] [4,8]
 
-* Angabe der Intervalle über eine Textdatei
+* Angabe der Intervalle Ã¼ber eine Textdatei
     
     MERGE -f test/testdaten.txt
 
 
 ##Profiling
-Zum Messen der Programmlaufzeit und des Speicherbedarfs steht in der Hauptklasse MergeInterval eine statische Variable 'MergeInterval.DEBUG_MODE' zur Verfügung.
-Wird diese auf TRUE gesetzt, werden zusätzliche Informationen zum Profiling auf Stdout ausgegeben.
+Zum Messen der Programmlaufzeit und des Speicherbedarfs steht in der Hauptklasse MergeInterval eine statische Variable 'MergeInterval.DEBUG_MODE' zur VerfÃ¼gung.
+Wird diese auf TRUE gesetzt, werden zusÃ¤tzliche Informationen zum Profiling auf Stdout ausgegeben.
 
 Folgende Feststellungen konnten getroffen werden:   
 
-Der größte Teil der Verarbeitungszeit wird für die Ein- und Ausgabe der Intervalldaten benötigt.  
-Für das Mergen der Daten wird ein relativ geringer Teil der gesamten Laufzeit benötigt.  
-Getestet wurde mit verschiedenen Datenmengen. Aus Zeitgründen wurden keine Durchschnittswerte mit mehreren Läufen ermittelt.
+Der grÃ¶ÃŸte Teil der Verarbeitungszeit wird fÃ¼r die Ein- und Ausgabe der Intervalldaten benÃ¶tigt.  
+FÃ¼r das Mergen der Daten wird ein relativ geringer Teil der gesamten Laufzeit benÃ¶tigt.  
+Getestet wurde mit verschiedenen Datenmengen. Aus ZeitgrÃ¼nden wurden keine Durchschnittswerte mit mehreren LÃ¤ufen ermittelt.
 
 * **Ausgangsliste mit 5 Intervallen, Ergebnisliste mit 2 Intervallen**  
 Verarbeitung der Eingabeparameter: 3 ms  
