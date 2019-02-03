@@ -1,0 +1,17 @@
+<project name="MergeInterval" basedir=".">
+  
+  <property name="src" location="src"/>
+  <property name="build" location="build"/>
+
+  <target name="compile" depends="clean,init" description="Kompiliert die Sourcen">
+    <javac srcdir="${src}" destdir="${build}" includeantruntime="false" source="1.8" target="1.8"/>
+  </target>
+
+  <target name="init">
+    <mkdir dir="${build}"/>
+  </target>
+
+  <target name="clean">
+    <delete dir="${build}"/>
+  </target>
+</project>
